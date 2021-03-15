@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://b.parsons.edu/~henrc131/MajorStudio1/seven/02_nyc-census-pop/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>NYC Population 2010</title>
+  <script src="./mapbox.js"></script>
+  <link href="./mapbox(1).css" rel="stylesheet">
+  <!--[if lte IE 8]>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+  <![endif]-->
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+<div id="map" class="leaflet-container leaflet-retina leaflet-fade-anim" tabindex="0"><div class="leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container leaflet-zoom-animated"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 210px; top: 21px;" src="./1539.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 210px; top: 277px;" src="./1540.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -46px; top: 21px;" src="./1539(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 466px; top: 21px;" src="./1539(2).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -46px; top: 277px;" src="./1540(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 466px; top: 277px;" src="./1540(2).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 210px; top: -235px;" src="./1538.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 210px; top: 533px;" src="./1541.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -46px; top: -235px;" src="./1538(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 466px; top: -235px;" src="./1538(2).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -46px; top: 533px;" src="./1541(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 466px; top: 533px;" src="./1541(2).png"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"></div><div class="leaflet-marker-pane"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://b.parsons.edu/~henrc131/MajorStudio1/seven/02_nyc-census-pop/#" title="Zoom in">+</a><a class="leaflet-control-zoom-out leaflet-disabled" href="http://b.parsons.edu/~henrc131/MajorStudio1/seven/02_nyc-census-pop/#" title="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="http://b.parsons.edu/~henrc131/MajorStudio1/seven/02_nyc-census-pop/#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: block;"><div class="map-legend wax-legend"><div class="my-legend">
+<div class="legend-title">NYC Population Density</div>
+<div class="legend-subtitle">People per Acre by Census Tract</div>
+<div class="legend-scale">
+  <ul class="legend-labels">
+    <li><span style="background:#fee8c8;"></span>0 - 30</li>
+    <li><span style="background:#fdd49e;"></span>31 - 58</li>
+    <li><span style="background:#fdbb84;"></span>59 - 88</li>
+    <li><span style="background:#fc8d59;"></span>89 - 122</li>
+    <li><span style="background:#ef6548;"></span>123 - 162</li>
+    <li><span style="background:#d7301f;"></span>163 - 226</li>
+    <li><span style="background:#990000;"></span>227 - 348</li>
+
+  </ul>
+</div>
+<div class="legend-source">Source: <a href="https://data.cityofnewyork.us/City-Government/New-York-City-Population-By-Census-Tracts/37cg-gxjd">NYC Open Data</a> and <a href="http://www.census.gov/">U.S. Census</a></div>
+</div>
+
+<style>
+  .wax-legend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .wax-legend .legend-subtitle {
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: normal;
+    font-size: 90%;
+    }
+  .wax-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .wax-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .wax-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .wax-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .wax-legend a {
+    color: #777;
+    }
+</style></div></div><div class="leaflet-control-attribution leaflet-control"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></div></div></div></div>
+<script type="text/javascript">
+
+var map = L.mapbox.map('map', 'chenrick.map-3gzk4pem,chenrick.nyc_census_2010_',{
+  //-74.3342,40.4378,-73.6008,40.9635
+  maxBounds: new L.LatLngBounds([40.4378,-74.3342], [40.9635,-73.6008]),
+  minZoom: 12,
+  maxZoom: 15
+})
+  .setView([40.6949,-73.9558], 12);
+
+</script>
+
+</body></html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://b.parsons.edu/~henrc131/carto_dorkshop/hurricane_geolocate.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src="./mapbox.js"></script>
+  <link href="./mapbox(1).css" rel="stylesheet">
+  <!--[if lte IE 8]>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+  <![endif]-->
+
+  <style>
+    body { margin:0; padding:0; }
+
+    a {
+    }
+
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+
+    #geolocate {
+      background: #fff;
+      position: absolute;
+      top: 2%;
+      left: 8%;
+      width: 5%;
+      margin-left: -80px;
+      z-index: 1000;
+      font-family: sans-serif;
+      font-weight: bold;
+      font: 13px/18px;
+      text-decoration: none;
+      text-align: center;
+      padding: .3% .1% .2% .1%;
+      color: #3C4E5A;
+      display: block;
+      border: 1px solid #BBB;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+    #geolocate:hover {
+      background: #ECF5FA;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div id="map" class="leaflet-container leaflet-retina leaflet-fade-anim" tabindex="0"><div class="leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container leaflet-zoom-animated"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 76px; top: 88px;" src="./769.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 332px; top: 88px;" src="./769(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 76px; top: 344px;" src="./770.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 332px; top: 344px;" src="./770(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 76px; top: -168px;" src="./768.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 332px; top: -168px;" src="./768(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -180px; top: 88px;" src="./769(2).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 588px; top: 88px;" src="./769(3).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -180px; top: 344px;" src="./770(2).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 588px; top: 344px;" src="./770(3).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 76px; top: 600px;" src="./771.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 332px; top: 600px;" src="./771(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -180px; top: -168px;" src="./768(2).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 588px; top: -168px;" src="./768(3).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -180px; top: 600px;" src="./771(2).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 588px; top: 600px;" src="./771(3).png"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"></div><div class="leaflet-marker-pane"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://b.parsons.edu/~henrc131/carto_dorkshop/hurricane_geolocate.html#" title="Zoom in">+</a><a class="leaflet-control-zoom-out leaflet-disabled" href="http://b.parsons.edu/~henrc131/carto_dorkshop/hurricane_geolocate.html#" title="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="http://b.parsons.edu/~henrc131/carto_dorkshop/hurricane_geolocate.html#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: block;"><div class="map-legend wax-legend"><div class="my-legend">
+<div class="legend-title">Hurricane Evacuation Zones and Centers</div>
+<div class="sub-title">(One = highest risk of flooding)</div>
+<div class="legend-scale">
+  <ul class="legend-labels">
+    <li><span style="background:rgb(153, 0, 13);"></span>One</li>
+    <li><span style="background:rgb(203, 24, 29);"></span>Two</li>
+    <li><span style="background:rgb(239, 59, 44);"></span>Three</li>
+    <li><span style="background:rgb(251, 106, 74);"></span>Four</li>
+    <li><span style="background:rgb(252, 146, 114);"></span>Five</li>
+    <li><span style="background:rgb(252, 224, 210);"></span>Six</li>
+    <li><span style="background:rgb(255, 245, 240);"></span>Non-Evac Zone</li>
+  </ul>
+</div>
+<div class="legend-source">Source: <a href="https://data.cityofnewyork.us/Public-Safety/Hurricane-Evacuation-Zones/8zwp-5ant">NYC Open Data</a></div>
+</div>
+
+<style>
+  .wax-legend {
+    max-width: 120px !important;
+    }
+  .wax-legend .legend-title {
+    width: 90%;
+    text-align: left;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .wax-legend .sub-title {
+    margin-bottom: 3px;
+    font-size: 85%;
+    font-style: italic;
+  }
+  .wax-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .wax-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .wax-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    opacity: 0.8;
+    border: 1px solid #999;
+    }
+  .wax-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .wax-legend a {
+    color: #777;
+    }
+</style></div></div><div class="leaflet-control-attribution leaflet-control"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></div></div></div></div>
+  <a href="http://b.parsons.edu/~henrc131/carto_dorkshop/hurricane_geolocate.html#" id="geolocate">Find me</a>
+
+  <script type="text/javascript">
+
+    var map = L.mapbox.map('map', 'chenrick.map-3gzk4pem,chenrick.xqb2zkt9', {
+
+          maxBounds: new L.LatLngBounds([40.4378,-74.3342], [40.9635,-73.6008]),
+          minZoom: 11,
+          maxZoom: 14
+
+          })
+
+    .setView([40.7108,-73.9916], 11);
+
+    var geolocate = document.getElementById('geolocate');
+
+    // This uses the HTML5 geolocation API, which is available on
+    // most mobile browsers and modern browsers, but not in Internet Explorer
+    //
+    // See this chart of compatibility for details:
+    // http://caniuse.com/#feat=geolocation
+
+    if (!navigator.geolocation) {
+
+        geolocate.innerHTML = 'geolocation is not available';
+
+          } else {
+
+              geolocate.onclick = function (e) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  map.locate();
+              };
+          }
+
+        // Once we've got a position, zoom and center the map
+        // on it, and add a single marker.
+        map.on('locationfound', function(e) {
+            map.fitBounds(e.bounds);
+
+            map.markerLayer.setGeoJSON({
+                type: "Feature",
+                geometry: {
+                    type: "Point",
+                    coordinates: [e.latlng.lng, e.latlng.lat]
+                },
+                properties: {
+                    'marker-color': '#000',
+                    'marker-symbol': 'star-stroked'
+                }
+            });
+
+            // And hide the geolocation button
+            geolocate.parentNode.removeChild(geolocate);
+        });
+
+        // If the user chooses not to allow their location
+        // to be shared, display an error message.
+        map.on('locationerror', function() {
+            geolocate.innerHTML = 'position could not be found';
+        });
+
+
+  </script>
+
+</body></html>
